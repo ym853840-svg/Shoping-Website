@@ -1,0 +1,109 @@
+.top_products .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px; /* Add some padding to avoid products touching edges */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust gap for better spacing */
+    justify-content: center; /* Center the products */
+    align-items: stretch; /* Make all cards equal height */
+}
+
+.top_products .container .card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between; /* Ensure equal height cards */
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Ensure 3 products per row */
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.top_products .container .card img {
+    width: 100%; /* Ensure images scale properly */
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.top_products .container .card b {
+    font-size: 20px;
+    text-align: center;
+}
+
+.top_products .container .card p {
+    font-size: 20px;
+    color: green;
+    text-align: center;
+}
+
+.top_products .container .card button {
+    background-color: #232838;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+.top_products .container .card button:hover {
+    background-color: #151a25;
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+    .top_products .container .card {
+        width: calc(50% - 20px); /* 2 per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .top_products .container .card {
+        width: 100%; /* 1 per row on small screens */
+    }
+}
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    max-width: 80%;
+    transition: all 0.3s ease;
+}
+
+.custom-modal-content.success {
+    background-color: #e9fce9;
+    color: #1e7e34;
+    border: 2px solid #28a745;
+}
+
+.custom-modal-content p {
+    margin: 0;
+}
+
