@@ -1,0 +1,554 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Raleway", sans-serif;
+    min-height: 3000px;
+}
+:root{
+    --main-color:#EEBF00;
+    --second-color:#232838;
+
+}
+*{
+    margin: 0;
+    padding:0;
+}
+/* start nav */
+nav{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    
+}
+.top_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-color);
+    padding:10px 50px;
+    color: #fff;
+
+}
+.top_nav .left_nav * {
+    margin-left: 5px;
+
+}
+.top_nav .right_nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+.top_nav .right_nav div{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+    position: relative;
+}
+.top_nav .right_nav div i{
+
+}
+.top_nav .right_nav div p{
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 3px;
+}
+.top_nav .right_nav div p:hover{
+    color: var(--main-color);
+}
+.top_nav .right_nav div:nth-of-type(3) i{
+    font-size: 18px;
+    transition: 0.5s;
+
+}
+.top_nav .right_nav div:nth-of-type(3) i:hover{
+   transform: rotate(360deg); 
+}
+.top_nav .right_nav div:nth-of-type(3) p{
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: red;
+}
+.top_nav .right_nav div:not(:last-of-type)::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    top: 0;
+    right: -15px;  /*-15 is half of gap*/
+   background-color:#fff;
+
+}
+
+/* end nav */
+
+
+/* start down_nav */
+.down_nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 50px 5px;
+    flex-direction: column;
+    gap: 10px;
+}
+.down_nav .top{
+    width: 100%;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.down_nav .top .ayhaga{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.down_nav ul {
+    display: flex;
+    gap:4px ;
+    
+}
+.down_nav ul li{
+    list-style: none;
+}
+.down_nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 15px 20px;
+    font-weight: 600px;
+    transition: 0.5s;
+    
+}
+.down_nav ul li a:hover,
+.down_nav ul li a.active{
+    background-color: var(--main-color);
+    color: #fff;
+    
+}
+
+
+
+/* end down_nav */
+
+
+
+/* start heder */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:80vh;
+    background: url(img/hero.png) bottom no-repeat ;
+    background-size:cover ;
+    margin-top: 50px;
+}
+ 
+header 
+{
+    display: flex;
+    gap: 15px;
+}
+header .header_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+header .header_title b{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .header_title h1{
+    font-size:40px ;
+
+}
+header .header_title h1 span{
+    color: var(--main-color);
+
+}
+header .header_title p{
+    font-weight: 700;
+    opacity: 0.5;
+
+}
+header .header_title div{
+
+}
+header .header_title div button{
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius:5px ;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+    
+    
+}
+header .header_title div button:hover{
+    background-color: #fff;
+    color: var(--main-color);
+}
+header .header_title div button:nth-of-type(2),
+.btn{
+    color: #fff;
+    background-color: var(--second-color);
+    border: 2px solid var(--second-color);
+}
+header .header_title div button:nth-of-type(2):hover,
+.btn:hover{
+    color: var(--second-color);
+    background-color: #fff;
+}
+header >    img:nth-of-type(1){
+    margin-top: 120px;
+    width: 280px;
+    animation:logo 1s linear alternate infinite ;
+
+}
+@keyframes  logo {
+    100%{
+        transform: translateY(-20px);
+    }
+    
+}
+/* end heder */
+
+
+/* start section top_products */
+section{
+    padding: 100px 0;
+
+}
+section .sec_title{
+    font-size: 40px;
+    font-style: italic;
+    position: relative;
+    text-align: center;
+    width: max-content;
+    
+}
+section .sec_title::before{
+    content: '';
+    position: absolute;
+    height: 35px;
+    width: 100%;
+    background: url(img/download.png) no-repeat center;
+    background-size: 100% 100%;
+    bottom: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.top_products{
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+
+}
+.top_products .slider{
+    width: 100%;
+    padding: 0 150px;/* */
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+}
+.top_products .slider .card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.top_products .slider .card:hover{
+    box-shadow: 5px 5px 10px  3px var(--main-color) ,-5px -5px 10px  3px var(--main-color);
+    border-radius: 30px;
+
+}
+
+.top_products .slider .card  > div:nth-of-type(1){
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top_products .slider .card div:nth-of-type(1) img{
+    width: 80%;
+    height: 230px;
+}
+.top_products .slider .card div:nth-of-type(2){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+.top_products .slider .card div:nth-of-type(2) b{
+    font-size: 25px;
+    
+}
+.top_products .slider .card div:nth-of-type(2) div{
+    display: flex;
+    gap: 2px;
+    
+}
+.top_products .slider .card div:nth-of-type(2) div i{
+    color: var(--main-color);
+    
+}
+.top_products .slider .card div:nth-of-type(2) p{
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    
+}
+.top_products .slider .card div:nth-of-type(2) p del{
+    color: red;
+    margin-left: 5px;
+    
+}
+.top_products .Addtocart{
+    width: 50%;
+    border: 2px solid var(--main-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+.top_products .Addtocart i{
+    padding: 8px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+.top_products .Addtocart::after{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.top_products .Addtocart:hover::after{
+    width: 100%;
+    z-index: -1;
+}
+.top_products .Addtocart:hover{
+    color: #fff;
+}
+
+.slick_track{
+ padding: 40px 0;
+}
+.slick-slide{
+    margin: 5px  20px;
+
+}
+.top_products .slider_icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    cursor: pointer;
+    top: 50%;
+}
+.top_products .slide_to_right{
+    right: 100px;
+    font-size: 20px;
+}
+.top_products .slide_to_left{
+    left: 100px;
+    font-size: 20px;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 30; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+ .view_more{
+     padding: 12px 18px;
+     border: 3px solid #000;
+     font-style: italic;
+     cursor: pointer;
+     font-weight:700;
+     font-family: "Raleway", sans-serif;
+     background-color: transparent;
+     font-size: 16px;
+     position: relative;
+     z-index: 2;
+    }
+    .view_more::after{
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: var(--main-color);
+        right: -20px;
+        top: 50%;
+        transform:translateY(-50%) ;
+    }
+    .view_more::before{
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: var(--main-color);
+        left: -20px;
+        top: 50%;
+        transform:translateY(-50%) ;
+    }
+    .view_more:hover::after{
+        animation: right 0.5s linear forwards;
+    }
+    .view_more:hover::before{
+        animation: left  0.5s linear forwards;
+    }
+    @keyframes right {
+        50%{
+            right: 0;
+        }
+        100%{
+            right: 0;
+            height: 100%;
+            width: 50%;
+            background-color: var(--main-color);
+            border-radius: 0;
+            z-index: -2;
+
+        }
+        
+    }
+    @keyframes left {
+        50%{
+            left: 0;
+        }
+        100%{
+            left: 0;
+            height: 100%;
+            width: 50%;
+            background-color: var(--main-color);
+            border-radius: 0;
+            z-index: -2;
+
+        }
+        
+    }
+    .view_more:hover{
+        letter-spacing: 2px;
+        color: #fff;
+        border: 3px solid #000;
+        transition: 0.5s 0.5s;
+    }
+    .About{
+        position: relative;
+    }
+    .About .sec_title{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+
+     
+    }
+/* end section top_products*/
+
+
+
+/* start sec-About */
+.About{
+    display: flex;
+    flex-direction: column;
+    gap:220px;
+    background-color: #eebe0089;
+}
+.About .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    
+}
+.About .container div{
+    width: 50%;
+    
+}
+.About .container div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.About .container div:nth-of-type(1) img{
+    width: 80%;
+}
+.About .container div:nth-of-type(2){
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.About .container div:nth-of-type(2) b{
+    font-size: 25px;
+    font-style: italic;
+
+}
+.About .container div:nth-of-type(2) p{
+    line-height: 1.5;
+    opacity: 0.7;
+}
+   
+.About .container div:nth-of-type(2) .btn{
+    width: max-content;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+
+}
+/* end sec-About */
